@@ -1,148 +1,167 @@
-<head>
-    <style>
-        .navbar {
-            display: flex;
-            width:100%;
-            height:40px;
-            flex-wrap: nowrap;
-        }
-        .navbar > a {
-            background-color: cornflowerblue;
-            color:white;
-            font-family: Arial, Helvetica, sans-serif;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            height:20px;
-            width:20%;
-            padding:15px;
-            transition:0.3s;
-        }
-        .navbar > a:hover {
-            background-color:rgb(41, 144, 247);
-            color:white;
-            font-family: Arial, Helvetica, sans-serif;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            height:25px;
-            width:20%;
-            padding:15px;
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-            z-index:2;
-        }
+<html>
+    <head>
+        <style>
+            .navbar {
+                display: flex;
+                width:100%;
+                height:40px;
+                flex-wrap: nowrap;
+            }
+            .navbar > a {
+                background-color: cornflowerblue;
+                color:white;
+                font-family:minecraftory;
+                font-size:14px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                height:20px;
+                width:25%;
+                padding:15px;
+                transition:0.3s;
+            }
+            .navbar > a:hover {
+                background-color:rgb(41, 144, 247);
+                color:white;
+                font-family:minecraftory;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                height:25px;
+                width:25%;
+                padding:15px;
+                box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+                z-index:2;
+            }
 
-        .navbar > #selected {
-            background-color:dodgerblue;
-            color:white;
-            font-family: Arial, Helvetica, sans-serif;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            height:35px;
-            width:20%;
-            padding:15px;
-            transition:0.3s;
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-            z-index:1;
-            margin-bottom: 5px;
-        }
+            .navbar > #selected {
+                background-color:dodgerblue;
+                color:white;
+                font-family:minecraftory;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                height:35px;
+                width:25%;
+                padding:15px;
+                transition:0.3s;
+                box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+                z-index:1;
+                margin-bottom: 5px;
+            }
 
-        .navbar > #selected:hover {
-            background-color:dodgerblue;
-            color:white;
-            font-family: Arial, Helvetica, sans-serif;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            height:40px;
-            width:20%;
-            margin-bottom: 0px;
-            padding:15px;
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-            z-index:1;
-        }
+            .navbar > #selected:hover {
+                background-color:dodgerblue;
+                color:white;
+                font-family:minecraftory;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                height:40px;
+                width:25%;
+                margin-bottom: 0px;
+                padding:15px;
+                box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+                z-index:1;
+            }
 
-        #MWfont 
-        {
-            width:50%;
-            height: auto;
-            transition: 2s;
-            z-index:4;
-        }
-        #MWfont:hover {
-            width: 75%;
-            top: 24.375%;
-            right:12.5%;
-            height: auto;
-            z-index:4;
-        }
+            #MWfont 
+            {
+                width:50%;
+                height: auto;
+                transition: 2s;
+                z-index:4;
+            }
+            #MWfont:hover {
+                width: 75%;
+                top: 24.375%;
+                right:12.5%;
+                height: auto;
+                z-index:4;
+            }
 
-        .parent {
-            position: relative;
-            width: 100%;
-            height:auto;
-        }
+            .parent {
+                position: relative;
+                width: 100%;
+                height:auto;
+            }
 
-        .image1 {
-            position: relative;
-            top: 0;
-            left: 0;
-        }
+            .image1 {
+                position: relative;
+                top: 0;
+                left: 0;
+            }
 
-        .image2 {
-            position: absolute;
-            top: 32.5%;
-            right:25%;
-            width:50%;
-        }
+            .image2 {
+                position: absolute;
+                top: 32.5%;
+                right:25%;
+                width:50%;
+            }
 
-        .header-container {
-            height:auto;
-            width:100%;
-            position: relative;
-            top:50px;
-        }
+            .header-container {
+                height:auto;
+                width:100%;
+                position: relative;
+                top:50px;
+            }
 
-        #wim {
-            height:auto; 
-            width:62.5%; 
-            z-index:1; 
-            left:18.75%; 
-            top:32.5%; 
-            position:absolute;
-            transition: 1s;
-        }
+            #wim {
+                height:auto; 
+                width:62.5%; 
+                z-index:1; 
+                left:18.75%; 
+                top:32.5%; 
+                position:absolute;
+                transition: 1s;
+            }
 
-        #wim:hover {
-            height:auto; 
-            width:70%; 
-            z-index:1; 
-            left:15%; 
-            top:30%; 
-            position:absolute;
-        }
-    </style>
+            #wim:hover {
+                height:auto; 
+                width:70%; 
+                z-index:1; 
+                left:15%; 
+                top:30%; 
+                position:absolute;
+            }
+        </style>
 
-    <style>
-        h1 {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-    </style>
-</head>
-<body style="margin:0; background-color:rgb(255, 255, 255);">
-    <div class="parent">
-        <img class="image1" src="https://cdn.discordapp.com/attachments/813874361688916024/1042780858232352859/2022-10-11_08.18.52.jpg" style="z-index:3; width:100%; height:auto; position: relative;">
-        <a href="https://youtube.com" target="_blank" style="text-decoration:none;">
-            <img class="image2" id="MWfont" src="https://cdn.discordapp.com/attachments/813874361688916024/1042780326461710386/d1f72e35f2a12c7a22dc60d58d345c58.png" style="position:absolute;">
-        </a>
-    </div>
-    
-    <div class="navbar" style="height:auto; width:auto;">
-        <a id="selected">Start</a>
-        <a href="https://youtube.com" target="_blank" style="text-decoration:none;">Modworlds</a>
-        <a>About us</a>
-        <a>FAQ</a>
-        <a>Projekte</a>
-    </div>
-    <div class="parent" style="margin-top:5%; margin-bottom:5%;">
-        <img src="https://cdn.discordapp.com/attachments/911985454792998952/1049281380460269568/MW_lms-spawn.edit.jpg" style="width:90%; height:auto; left:5%; position:relative; border-radius:110px; top:10%;">
-        <img id="wim" src="https://cdn.discordapp.com/attachments/911985454792998952/1049306029923504158/wim-white.png">
-    </div>
-</body>
+        <style>
+            @font-face {
+                font-family:minecraftory;
+                src:url(recources/Minercraftory.ttf);
+            }
+
+            h1 {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            p {
+                font-family:minecraftory;
+                color:dodgerblue;
+                font-size:20px;
+                text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            }
+        </style>
+    </head>
+    <body style="margin:0; background-color:rgb(255, 255, 255);">
+        <div class="parent">
+            <img class="image1" src="https://cdn.discordapp.com/attachments/813874361688916024/1042780858232352859/2022-10-11_08.18.52.jpg" style="z-index:3; width:100%; height:auto; position: relative;">
+            <a href="https://youtube.com" target="_blank" style="text-decoration:none;">
+                <img class="image2" id="MWfont" src="https://cdn.discordapp.com/attachments/813874361688916024/1042780326461710386/d1f72e35f2a12c7a22dc60d58d345c58.png" style="position:absolute;">
+            </a>
+        </div>
+        
+        <div class="navbar" style="height:auto; width:auto;">
+            <a id="selected">Modworlds</a>
+            <a>About us</a>
+            <a>FAQ</a>
+            <a>Projekte</a>
+        </div>
+        <div class="parent" style="margin-top:10%; margin-bottom:5%;">
+            <img src="https://cdn.discordapp.com/attachments/911985454792998952/1049281380460269568/MW_lms-spawn.edit.jpg" style="width:90%; height:auto; left:5%; position:relative; border-radius:110px; top:10%; box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);">
+            <img id="wim" src="https://cdn.discordapp.com/attachments/911985454792998952/1049306029923504158/wim-white.png">
+        </div>
+        <center>
+            <div style="width:75%;">
+                <p>Modworlds is a collective of people which does host game projects with unique modpacks, rules and playstyles.</p>
+            </div>
+        </center>
+    </body>
+</html>
