@@ -42,7 +42,6 @@
                 width:25%;
                 padding:15px;
                 transition:0.3s;
-                box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
                 z-index:1;
                 margin-bottom: 5px;
             }
@@ -59,21 +58,6 @@
                 padding:15px;
                 box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
                 z-index:1;
-            }
-
-            #MWfont 
-            {
-                width:50%;
-                height: auto;
-                transition: 2s;
-                z-index:4;
-            }
-            #MWfont:hover {
-                width: 75%;
-                top: 24.375%;
-                right:12.5%;
-                height: auto;
-                z-index:4;
             }
 
             .parent {
@@ -101,7 +85,10 @@
                 position: relative;
                 top:50px;
             }
+            
+        </style>
 
+        <style>
             #wim {
                 height:auto; 
                 width:62.5%; 
@@ -120,6 +107,22 @@
                 top:30%; 
                 position:absolute;
             }
+
+            #MWfont 
+            {
+                width:50%;
+                height: auto;
+                transition: 2s;
+                z-index:4;
+            }
+            #MWfont:hover {
+                width: 75%;
+                top: 24.375%;
+                right:12.5%;
+                height: auto;
+                z-index:4;
+            }
+
         </style>
 
         <style>
@@ -140,6 +143,50 @@
                 text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
             }
         </style>
+
+        <style>
+            @media screen and (max-width: 900px) {
+
+                .dissapearOnPhone {
+                    display:none;
+                }
+
+
+                #ManageMarginPlayer {
+                    margin-right:0px;
+                    margin-left:0px;
+                    max-width:0px;
+                }
+                
+                #ManageMarginText {
+                    margin-left: 10%;
+                    margin-right:10%;
+                    width:80%;
+                }
+            }
+
+            @media screen and (min-width: 900px) {
+
+                .dissapearOnPC {
+                    display:none;
+                }
+
+
+                #ManageMarginPlayer {
+                    margin-right: 5%;
+                    margin-left: 10%;
+                    max-width:20%;
+                }
+
+                #ManageMarginText {
+                    margin-left:0px;
+                    margin-right:20%;
+                    width: 60%;
+                }
+            }
+
+            
+        </style>
     </head>
     <body style="margin:0; background-color:rgb(255, 255, 255);">
         <div class="parent">
@@ -155,17 +202,20 @@
             <a>FAQ</a>
             <a>Projekte</a>
         </div>
-        <div class="parent" style="margin-top:10%; margin-bottom:5%;">
+        <div class="parent" style="margin-top:10%; margin-bottom:10%;">
             <img src="https://cdn.discordapp.com/attachments/911985454792998952/1049281380460269568/MW_lms-spawn.edit.jpg" style="width:90%; height:auto; left:5%; position:relative; border-radius:110px; top:10%; box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);">
             <img id="wim" src="https://cdn.discordapp.com/attachments/911985454792998952/1049306029923504158/wim-white.png">
         </div>
-        <table style="width:100%; height:auto;">
-            <tr>
-                <td style="width:5%;"></td>
-                <td style="width:25%;"><img src="https://cdn.discordapp.com/attachments/911985454792998952/1049991551452983306/WalkingSkin.png" style="margin-left:5%; z-index:0;"></td>
-                <td style="width:60%;"><p style="text-align:center;">Modworlds is a collective of people which does host game projects with unique modpacks, rules and playstyles.</p></td>
-                <td style="width:10%;"></td>
-            </tr>
-        </table>
+        
+        <div style="flex-wrap:nowrap; display:flex;">
+            <div id="ManageMarginPlayer">
+                <img src="https://cdn.discordapp.com/attachments/911985454792998952/1049991551452983306/WalkingSkin.png" style="margin-left:5%; z-index:0; max-width:200px;" class="dissapearOnPhone">
+            </div>
+            <div id="ManageMarginText">
+                <p style="text-align:center;">
+                    Modworlds is a collective of people which do host game projects with unique modpacks, rules and playstyles. Since this is a placeholder text i do not really to explain what modworlds is because I will create a text for that later. This text is more for testing then for displaying information
+                </p>
+            </div>
+        </div>
     </body>
 </html>
