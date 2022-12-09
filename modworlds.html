@@ -1,166 +1,20 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" title="Modworlds" >
     <head>
-        <style>
-            .invertednav {
-                display: flex;
-                width:100%;
-                height:30px;
-                flex-wrap: nowrap;
-                position:absolute;
-                z-index:5;
-                bottom:30px;
-            }
-            .invertednav > a {
-                background-color:#eeeeee;
-                color:dodgerblue;
-                font-family:minecraftory;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
-                margin-top:15px;
-                height:15px;
-                width:25%;
-                padding:15px;
-                transition:0.5s;
-                box-shadow: 0 0 25px rgba(0, 0, 0, 0.3) inset;
-            }
-            .invertednav > a:hover {
-                background-color: #ffffff;
-                height:22.5px;
-                margin-top:7.5px;
-                box-shadow: 0 0 25px rgba(0, 0, 0, 0) inset;
-            }
-            .invertednav > #selected {
-                background-color: #ffffff;
-                box-shadow: 0 0 25px rgba(0, 0, 0, 0);
-            }
+        <meta charset="UTf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewpoint" content="width=device-widyh, initial-scale=1.0">
 
-            .parent {
-                position: relative;
-                width: 100%;
-                height:auto;
-            }
+        <title>Modworlds</title>
+        <link rel="icon" type="image" href="">
 
-            .image1 {
-                position: relative;
-                top: 0;
-                left: 0;
-            }
+        <link rel="stylesheet" href="recources/classes.css">
+        <link rel="stylesheet" href="recources/Ids.css">
+        <link rel="stylesheet" href="recources/modifiers.css">
 
-            .image2 {
-                position: absolute;
-                top: 32.5%;
-                right:25%;
-                width:50%;
-            }
+        <link rel="stylesheet" href="recources/special-content/PageOnly-Modworlds/special-ids.css">
+        <script src="recources/special-content/PageOnly-Modworlds/scripts/tabstyles.js"></script>
 
-            .header-container {
-                height:auto;
-                width:100%;
-                position: relative;
-                top:50px;
-            }
-            
-        </style>
-
-        <style>
-            #wim {
-                height:auto; 
-                width:62.5%; 
-                z-index:1; 
-                left:18.75%; 
-                top:32.5%; 
-                position:absolute;
-                transition: 1s;
-            }
-
-            #wim:hover {
-                height:auto; 
-                width:70%; 
-                z-index:1; 
-                left:15%; 
-                top:30%; 
-                position:absolute;
-            }
-
-            #MWfont 
-            {
-                width:50%;
-                height: auto;
-                transition: 2s;
-                z-index:4;
-            }
-            #MWfont:hover {
-                width: 75%;
-                top: 24.375%;
-                right:12.5%;
-                height: auto;
-                z-index:4;
-            }
-
-        </style>
-
-        <style>
-            @font-face {
-                font-family:minecraftory;
-                src:url(recources/Minercraftory.ttf);
-                
-            }
-
-            h1 {
-                font-family: Arial, Helvetica, sans-serif;
-            }
-
-            p {
-                font-family:minecraftory;
-                color:dodgerblue;
-                font-size:20px;
-                text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-            }
-        </style>
-
-        <style>
-            @media screen and (max-width: 900px) {
-
-                .dissapearOnPhone {
-                    display:none;
-                }
-
-
-                #ManageMarginPlayer {
-                    margin-right:0px;
-                    margin-left:0px;
-                    max-width:0px;
-                }
-                
-                #ManageMarginText {
-                    margin-left: 10%;
-                    margin-right:10%;
-                    width:80%;
-                }
-            }
-
-            @media screen and (min-width: 900px) {
-
-                .dissapearOnPC {
-                    display:none;
-                }
-
-
-                #ManageMarginPlayer {
-                    margin-right: 5%;
-                    margin-left: 10%;
-                    max-width:20%;
-                }
-
-                #ManageMarginText {
-                    margin-left:0px;
-                    margin-right:20%;
-                    width: 60%;
-                }
-            }
-
-            
-        </style>
     </head>
     <body style="margin:0; background-color:rgb(255, 255, 255);">
         <div class="parent">
@@ -169,15 +23,15 @@
                 <img class="image2" id="MWfont" src="https://cdn.discordapp.com/attachments/813874361688916024/1042780326461710386/d1f72e35f2a12c7a22dc60d58d345c58.png" style="position:absolute;">
             </a>
             <div class="invertednav">
-                <a id="selected">Modworlds</a>
-                <a>About us</a>
-                <a>FAQ</a>
-                <a>Projects</a>
+                <a id="TabOne">Modworlds</a>
+                <a id="TabTwo" onmouseover="setgraphics(2)" onmouseleave="resetgraphics()">About us</a>
+                <a id="TabThree" onmouseover="setgraphics(3)" onmouseleave="resetgraphics()">FAQ</a>
+                <a id="TabFour" onmouseover="setgraphics(4)" onmouseleave="resetgraphics()">Projects</a>
             </div>
         </div>
         
         <div class="parent" style="margin-top:10%; margin-bottom:10%;">
-            <img src="https://cdn.discordapp.com/attachments/911985454792998952/1049281380460269568/MW_lms-spawn.edit.jpg" style="width:90%; height:auto; left:5%; position:relative; border-radius:110px; top:10%; box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);">
+            <img src="https://cdn.discordapp.com/attachments/911985454792998952/1049281380460269568/MW_lms-spawn.edit.jpg" id="wimb">
             <img id="wim" src="https://cdn.discordapp.com/attachments/911985454792998952/1049306029923504158/wim-white.png">
         </div>
         

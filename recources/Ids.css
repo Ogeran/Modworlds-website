@@ -1,0 +1,102 @@
+#MWfont {
+    width:50%;
+    height: auto;
+    transition: 2s;
+    z-index:4;
+}
+
+#MWfont:hover {
+    width: 75%;
+    top: 24.375%;
+    right:12.5%;
+    height: auto;
+    z-index:4;
+}
+
+@media screen and (max-width: 900px) {
+    #wimb {
+        width:90%; 
+        height:auto; 
+        left:5%; 
+        position:relative; 
+        border-radius:110px; 
+        margin-top:50px; 
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    }
+
+    #wim {
+        height:auto; 
+        width:62.5%; 
+        z-index:1; 
+        left:18.75%; 
+        top:32.5%; 
+        margin-top:35px;
+        position:absolute;
+        transition: 1s;
+    }
+
+    #wim:hover {
+        height:auto; 
+        width:70%; 
+        z-index:1; 
+        left:15%; 
+        top:30%;
+        margin-top:35px; 
+        position:absolute;
+    }
+
+    #ManageMarginPlayer {
+        margin-right:0px;
+        margin-left:0px;
+        max-width:0px;
+    }
+    
+    #ManageMarginText {
+        margin-left: 10%;
+        margin-right:10%;
+        width:80%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #wimb {
+        width:90%; 
+        height:auto; 
+        left:5%; 
+        position:relative; 
+        border-radius:110px; 
+        top:10%; 
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    }
+
+    #wim {
+        height:auto; 
+        width:62.5%; 
+        z-index:1; 
+        left:18.75%; 
+        top:32.5%; 
+        position:absolute;
+        transition: 1s;
+    }
+
+    #wim:hover {
+        height:auto; 
+        width:70%; 
+        z-index:1; 
+        left:15%; 
+        top:30%; 
+        position:absolute;
+    }
+
+    #ManageMarginPlayer {
+        margin-right: 5%;
+        margin-left: 10%;
+        max-width:20%;
+    }
+
+    #ManageMarginText {
+        margin-left:0px;
+        margin-right:20%;
+        width: 60%;
+    }
+}
