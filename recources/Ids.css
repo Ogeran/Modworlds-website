@@ -88,15 +88,52 @@
         position:absolute;
     }
 
-    #ManageMarginPlayer {
+    #ManageMarginPlayerLeft {
         margin-right: 5%;
         margin-left: 10%;
         max-width:20%;
     }
 
-    #ManageMarginText {
+    #ManageMarginTextRight {
         margin-left:0px;
         margin-right:20%;
         width: 60%;
+    }
+
+    #ManageMarginPlayerRight {
+        margin-right: 20%;
+        margin-left: 5%;
+        max-width:20%;
+    }
+
+    #ManageMarginTextLeft {
+        margin-left:10%;
+        margin-right:0px;
+        width: 60%;
+    }
+
+    #DcBackground {
+        margin-left:4rem; 
+        margin-right:4rem;
+        margin-top:4rem; 
+        margin-bottom:4rem; 
+        width:12rem; 
+        height:12rem; 
+        border-radius:6rem;
+        background-color:#ffffff;
+
+        
+    }
+    #DcLogo {
+        width:60%;
+        height:45.5%;
+        margin-top:27.25%;
+        margin-right:20%;
+        margin-bottom:27.25%;
+        margin-left:20%;
+        transition:1s;
+    }
+    #DcLogo:hover {
+        transform: scale(1.125);
     }
 }
