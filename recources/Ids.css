@@ -13,6 +13,31 @@
     z-index:4;
 }
 
+#DcBackground {
+    margin-left:4rem; 
+    margin-right:4rem;
+    margin-top:4rem; 
+    margin-bottom:4rem; 
+    width:12rem; 
+    height:12rem; 
+    border-radius:6rem;
+    background-color:#ffffff;
+
+    aspect-ratio:1/1;
+}
+#DcLogo {
+    width:60%;
+    height:45.5%;
+    margin-top:27.25%;
+    margin-right:20%;
+    margin-bottom:27.25%;
+    margin-left:20%;
+    transition:1s;
+}
+#DcLogo:hover {
+    transform: scale(1.125);
+}
+
 @media screen and (max-width: 900px) {
     #wimb {
         width:90%; 
@@ -110,30 +135,5 @@
         margin-left:10%;
         margin-right:0px;
         width: 60%;
-    }
-
-    #DcBackground {
-        margin-left:4rem; 
-        margin-right:4rem;
-        margin-top:4rem; 
-        margin-bottom:4rem; 
-        width:12rem; 
-        height:12rem; 
-        border-radius:6rem;
-        background-color:#ffffff;
-
-        
-    }
-    #DcLogo {
-        width:60%;
-        height:45.5%;
-        margin-top:27.25%;
-        margin-right:20%;
-        margin-bottom:27.25%;
-        margin-left:20%;
-        transition:1s;
-    }
-    #DcLogo:hover {
-        transform: scale(1.125);
     }
 }
