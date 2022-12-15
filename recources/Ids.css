@@ -121,8 +121,7 @@
 
     #ManageMarginTextRight {
         margin-left:0px;
-        margin-right:20%;
-        width: 60%;
+        margin-right:0px;
     }
 
     #ManageMarginPlayerRight {
@@ -132,8 +131,7 @@
     }
 
     #ManageMarginTextLeft {
-        margin-left:10%;
+        margin-left:0%;
         margin-right:0px;
-        width: 60%;
     }
 }

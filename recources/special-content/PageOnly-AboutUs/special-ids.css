@@ -19,7 +19,8 @@
     #TabTwo {
         color:dodgerblue;
         font-family:minecraftory;
-        border-radius:20px;
+        border-top-right-radius:20px;
+        border-top-left-radius:20px;
         margin-top:15px;
         height:15px;
         width:25%;
@@ -80,4 +81,9 @@
         margin-top:7.5px;
         box-shadow: 0 0 25px rgba(0, 0, 0, 0) inset;
     }
+}
+
+.invertednav > #TabTwo {
+    background-color: #ffffff;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0);
 }
