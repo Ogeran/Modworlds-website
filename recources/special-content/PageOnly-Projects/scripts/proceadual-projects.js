@@ -11,7 +11,7 @@ function UpdateProjects() {
 
                 const e = document.createElement("div");
 
-                e.style.width = '100%'
+                e.style.width = '85%'
                 e.style.height = '20%'
                 e.style.backgroundImage = `url(${project.back})`;
                 e.style.backgroundSize = 'cover';
@@ -20,8 +20,11 @@ function UpdateProjects() {
                 e.style.display = 'flex';
                 e.style.flexWrap = 'nowrap'
 
-                e.style.marginTop = '25%';
-                e.style.marginBottom = '25%';
+                e.style.marginTop = '15%';
+                e.style.marginBottom = '15%';
+                e.style.marginLeft = '7.5%';
+
+                e.style.borderRadius = '10000px';
 
                 e.style.justifyContent = 'center';
                 e.style.alignItems = 'center';
