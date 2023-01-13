@@ -53,9 +53,35 @@ function LoadMemberCards() {
 
                 if(i != 0) {
                     e.style.marginTop = '20%';
-                }
 
-                if(i % 2 == 0) {
+                    if(i % 2 == 0) {
+                        e.style.borderTopLeftRadius = '10000px';
+                        e.style.borderBottomLeftRadius = '10000px';
+                        e.style.marginLeft = '5%';
+    
+                        e_textContainer.appendChild(e_title);
+                        e_textContainer.appendChild(e_description);
+                        e.appendChild(e_img);
+                        e.appendChild(e_textContainer);
+                    }
+                    else {
+                        e.style.borderTopRightRadius = '10000px';
+                        e.style.borderBottomRightRadius = '10000px';
+                        e.style.marginRight = '5%';
+    
+                        e_textContainer.appendChild(e_title);
+                        e_textContainer.appendChild(e_description);
+                        e.appendChild(e_textContainer);
+                        e.appendChild(e_img);
+                    }
+                    document.getElementById("member_cards").appendChild(e);
+                }
+                else {
+                    var container = document.createElement("div");
+
+                    container.style.width = '100%';
+                    container.style.paddingTop = '20%';
+                    
                     e.style.borderTopLeftRadius = '10000px';
                     e.style.borderBottomLeftRadius = '10000px';
                     e.style.marginLeft = '5%';
@@ -64,18 +90,11 @@ function LoadMemberCards() {
                     e_textContainer.appendChild(e_description);
                     e.appendChild(e_img);
                     e.appendChild(e_textContainer);
-                }
-                else {
-                    e.style.borderTopRightRadius = '10000px';
-                    e.style.borderBottomRightRadius = '10000px';
-                    e.style.marginRight = '5%';
 
-                    e_textContainer.appendChild(e_title);
-                    e_textContainer.appendChild(e_description);
-                    e.appendChild(e_textContainer);
-                    e.appendChild(e_img);
+                    container.appendChild(e);
+
+                    document.getElementById("member_cards").appendChild(container);
                 }
-                document.getElementById("member_cards").appendChild(e);
             }
         }
     }

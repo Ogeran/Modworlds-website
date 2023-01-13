@@ -14,6 +14,7 @@ function UpdateProjects() {
                 e.style.width = '85%'
                 e.style.height = '20%'
                 e.style.backgroundImage = `url(${project.back})`;
+                e.style.backgroundRepeat = 'no-repeat';
                 e.style.backgroundSize = 'cover';
                 e.style.backgroundAttachment = 'fixed';
                 

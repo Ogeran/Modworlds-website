@@ -5,14 +5,11 @@
 }
 
 .header-container {
-    width:90%; 
+    width:100%; 
     background-color: dodgerblue; 
-    margin-top:12.5%; 
-    margin-bottom:12.5%; 
-    border-radius:500px; 
-    margin-left:5%; 
-    margin-right:5%;
+    margin-top:12.5%;
     display: flex;
+    flex-wrap:wrap;
     justify-content: center;
     align-items:center;
 }

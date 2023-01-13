@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" title="Modworlds">
+<html lang="en" title="Modworlds" >
     <head>
         <meta charset="UTf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,12 @@
         <link rel="stylesheet" href="recources/Ids.css">
         <link rel="stylesheet" href="recources/modifiers.css">
 
-        <link rel="stylesheet" href="recources/special-content/PageOnly-Projects/special-ids.css">
-        <script src="recources/special-content/PageOnly-Projects/scripts/tabstyles.js"></script>
-        <script src="recources/special-content/PageOnly-Projects/scripts/proceadual-projects.js"></script>
-        
+        <link rel="stylesheet" href="recources/special-content/PageOnly-FAQ/special-ids.css">
+        <script src="recources/special-content/PageOnly-FAQ/scripts/tabstyles.js"></script>
+        <script src="recources/special-content/PageOnly-FAQ/scripts/procedual-faq.js"></script>
+
     </head>
-    <body style="margin:0; background-color:rgb(255, 255, 255);" onresize="resetgraphics()" onload="UpdateProjects()">
+    <body style="margin:0; background-color:rgb(255, 255, 255);" onresize="resetgraphics()" onload="CreateFAQsCollapsable()">
         <div class="parent">
             <img class="image1" src="https://cdn.discordapp.com/attachments/813874361688916024/1042780858232352859/2022-10-11_08.18.52.jpg" style="z-index:3; width:100%; height:auto; position: relative;">
             <a href="https://youtube.com" target="_blank" style="text-decoration:none;">
@@ -26,17 +26,20 @@
             <div class="invertednav">
                 <a id="TabOne" onmouseover="setgraphics(1)" onmouseleave="resetgraphics()" href="modworlds.html">Modworlds</a>
                 <a id="TabTwo" onmouseover="setgraphics(2)" onmouseleave="resetgraphics()" href="about_us.html">About us</a>
-                <a id="TabThree">Projects</a>
-                <a id="TabFour" onmouseover="setgraphics(4)" onmouseleave="resetgraphics()" href="faq.html">FAQ</a>
+                <a id="TabThree" onmouseover="setgraphics(3)" onmouseleave="resetgraphics()" href="projects.html">Projects</a>
+                <a id="TabFour">FAQ</a>
             </div>
+        </div>
+
+        <div class="header-container">
+            <p>FAQs</p>
         </div>
         
-        <div style="width:100%; background-color: dodgerblue; margin-top:12.5%; display: flex; justify-content: center; align-items:center; flex-wrap:wrap;">
-            <p style="width:100%; color: #ffffff; text-align: center; font-size:5vw; margin:2.5%;">Projects</p>
-            <div id="back">
-            </div>
+        <div id="faq-container">
+
         </div>
-        <div style="background-color:dodgerblue; margin-top:0; height:auto; width:100%;">
+
+        <div style="background-color:dodgerblue; margin-top:5%; height:auto; width:100%;">
             <div style="display:flex; flex-wrap:nowrap; height:100%; width:100%;">
                 <img class="dissapearOnPhone" src="https://cdn.discordapp.com/attachments/911985454792998952/1051852657901453372/Ogeran_Footer.png" style="height:16rem; width:10.5rem; margin-top:2rem; margin-left:2rem; margin-right:2rem;">
                 <div style="display: flex; flex-wrap:wrap; width:49.5rem; margin-top:4rem; margin-bottom:4rem; margin-left:2rem;"> 
