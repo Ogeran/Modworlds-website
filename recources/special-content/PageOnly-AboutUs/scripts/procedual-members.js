@@ -8,7 +8,7 @@ function LoadMemberCards() {
                 var member = team.Members[i];
                 var e = document.createElement("div");
 
-                e.style.width = '95%';
+                e.style.width = '95% - 0.5rem';
                 e.style.backgroundImage = `url(${member.Back})`
                 e.style.backgroundRepeat = 'no-repeat';
                 e.style.backgroundSize = 'cover';
@@ -16,6 +16,9 @@ function LoadMemberCards() {
 
                 e.style.display = 'flex';
                 e.style.flexWrap = 'nowrap';
+
+                e.style.borderTop = '0.5rem solid white';
+                e.style.borderBottom = '0.5rem solid white';
 
                 var e_img = document.createElement("img");
 
@@ -58,6 +61,8 @@ function LoadMemberCards() {
                         e.style.borderTopLeftRadius = '10000px';
                         e.style.borderBottomLeftRadius = '10000px';
                         e.style.marginLeft = '5%';
+                        e.style.borderLeft = '0.5rem solid white';
+                        e.style.borderRight = '0';
     
                         e_textContainer.appendChild(e_title);
                         e_textContainer.appendChild(e_description);
@@ -68,6 +73,8 @@ function LoadMemberCards() {
                         e.style.borderTopRightRadius = '10000px';
                         e.style.borderBottomRightRadius = '10000px';
                         e.style.marginRight = '5%';
+                        e.style.borderRight = '0.5rem solid white';
+                        e.style.borderLeft = '0';
     
                         e_textContainer.appendChild(e_title);
                         e_textContainer.appendChild(e_description);
@@ -85,6 +92,8 @@ function LoadMemberCards() {
                     e.style.borderTopLeftRadius = '10000px';
                     e.style.borderBottomLeftRadius = '10000px';
                     e.style.marginLeft = '5%';
+                    e.style.borderLeft = '0.5rem solid white';
+                    e.style.borderRight = '0';
 
                     e_textContainer.appendChild(e_title);
                     e_textContainer.appendChild(e_description);

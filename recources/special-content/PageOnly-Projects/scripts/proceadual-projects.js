@@ -30,6 +30,8 @@ function UpdateProjects() {
                 e.style.justifyContent = 'center';
                 e.style.alignItems = 'center';
 
+                e.style.border = '0.5rem white solid'
+
                 const e_img = document.createElement("img");
 
                 e_img.src = project.PB;
