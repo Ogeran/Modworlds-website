@@ -22,3 +22,8 @@ p {
 a {
     font-family:minecraftory;
 }
+
+*:focus {
+    border: none;
+    outline: none;
+}

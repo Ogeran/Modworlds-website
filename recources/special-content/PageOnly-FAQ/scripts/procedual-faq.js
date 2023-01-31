@@ -33,19 +33,35 @@ function CreateFAQsCollapsable() {
                 collapsable.style.fontSize = '3vw';
 
                 collapsable.style.border = '0';
+                collapsable.style.transition = '0.2s'
+                
+                collapsable.addEventListener("mouseover", function() {
+                    if(this.id != "open") {
+                        this.style.backgroundColor = 'cornflowerblue';
+                    }
+                    else {
+                        this.backgroundColor = 'dodgerblue';
+                    }
+                })
+                collapsable.addEventListener("mouseleave", function() {
+                    this.style.backgroundColor = 'dodgerblue';
+                })
 
                 collapsable.textContent = faq.q;
 
                 collapsable.addEventListener("click", function() {
                     var next = this.nextElementSibling;
-
                     if(next.style.display != 'flex') {
                         next.style.display = 'flex';
+                        this.id = "open";
+                        this.style.backgroundColor = 'dodgerblue';
                         this.style.borderBottomLeftRadius = '0';
                         this.style.borderBottomRightRadius = '0';
                         this.style.boxShadow = '0 0 0px rgba(0, 0, 0, 0)';
                     } else {
                         next.style.display = 'none';
+                        this.id = "close"
+                        this.style.backgroundColor = 'cornflowerblue';
                         this.style.borderBottomLeftRadius = '1rem';
                         this.style.borderBottomRightRadius = '1rem';
                         this.style.boxShadow = '0 0 25px rgba(0, 0, 0, 0.3)';
