@@ -11,7 +11,7 @@ function UpdateProjects() {
 
                 const e = document.createElement("div");
 
-                e.style.width = '100%'
+                e.style.width = '90%'
                 e.style.height = '20%'
                 e.style.backgroundImage = `url(${project.back})`;
                 e.style.backgroundSize = 'cover';
@@ -20,8 +20,10 @@ function UpdateProjects() {
                 e.style.display = 'flex';
                 e.style.flexWrap = 'nowrap'
 
-                e.style.marginTop = '25%';
-                e.style.marginBottom = '25%';
+                e.style.borderRadius = '10000px';
+                e.style.marginLeft = '5%'
+                e.style.marginTop = '15%';
+                e.style.marginBottom = '15%';
 
                 e.style.justifyContent = 'center';
                 e.style.alignItems = 'center';
@@ -30,10 +32,11 @@ function UpdateProjects() {
 
                 e_img.src = project.PB;
                 e_img.style.borderRadius = '10000px';
-                e_img.style.width = '20%'
+                e_img.style.width = '20%';
                 e_img.style.height = '20%';
-                e_img.style.margin = '2.5%'
-                e_img.style.aspectRatio = '1/1'
+                e_img.style.margin = '2.5%';
+                e_img.style.aspectRatio = '1/1';
+                e_img.style.transition = '0.5s'
 
                 const e_textContainer = document.createElement("div");
 
@@ -61,12 +64,20 @@ function UpdateProjects() {
                 e_description.style.color = '#ffffff';
                 e_description.textContent = project.description;
 
+                const e_linkcontainer = document.createElement("a");
+
+                e_linkcontainer.href = project.DC;
+                e_linkcontainer.target = '_blank';
+
                 e_textContainer.appendChild(e_title);
                 e_textContainer.appendChild(e_description);
 
                 e.appendChild(e_img);
                 e.appendChild(e_textContainer);
-                document.getElementById("back").appendChild(e);
+
+                e_linkcontainer.appendChild(e);
+
+                document.getElementById("back").appendChild(e_linkcontainer);
             }
         }
     }
