@@ -1,0 +1,9 @@
+@font-face {
+    font-family:minecraftory;
+    src:url(../graphics/textstyles/Minercraftory.ttf);
+}
+
+* {
+    font-family:minecraftory;
+    text-decoration: none;
+}
