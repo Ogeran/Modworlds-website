@@ -1,0 +1,104 @@
+#playerLeft {
+    height: auto;
+    width: 10vw;
+    object-fit: contain;
+}
+
+#playerLeftText {
+    height:auto;
+    width: 50vw;
+    color:white;
+    margin-left: 10vw;
+    text-align: center;
+
+    display: inline-block;
+    position: relative;
+}
+
+#playerRight {
+    height: auto;
+    width: 10vw;
+    object-fit: contain;
+}
+
+#playerRightText {
+    display:flex;
+    float: right;
+    height:auto;
+    width: 50vw;
+    color:white;
+    margin-right: 10vw;
+    text-align: center;
+
+    display: inline-block;
+    position: relative;
+}
+
+@media only screen and (max-width: 800px) {
+    #playerLeftText {
+        font-size:2.5vw;
+        margin-left: 10vw;
+    }
+    #playerRightText {
+        font-size:2.5vw;
+        margin-right: 10vw;
+    }
+
+    
+    #playerLeft {
+        height: auto;
+        width: 20vw;
+        object-fit: contain;
+    }
+    #playerRight {
+        height: auto;
+        width: 20vw;
+        object-fit: contain;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    #playerLeftText {
+        font-size:2vw;
+        margin-left: 15vw;
+    }
+    #playerRightText {
+        font-size:2vw;
+        margin-right: 15vw;
+    }
+
+
+    #playerLeft {
+        height: auto;
+        width: 15vw;
+        object-fit: contain;
+    }
+    #playerRight {
+        height: auto;
+        width: 15vw;
+        object-fit: contain;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #playerLeftText {
+        font-size:1.5vw;
+        margin-left: 10vw;
+    }
+    #playerRightText {
+        font-size:1.5vw;
+        margin-right: 10vw;
+    }
+
+
+    #playerLeft {
+        height: auto;
+        width: 10vw;
+        object-fit: contain;
+    }
+    #playerRight {
+        height: auto;
+        width: 10vw;
+        object-fit: contain;
+    }
+}

@@ -4,6 +4,9 @@ function manageNavBar(element) {
 
     e = pre.id;
 
+    if(pre == null) {
+        return;
+    }
     pre.id = "edit";
 
     document.getElementById("edit").style.borderBottomRightRadius = '0.5cm';
