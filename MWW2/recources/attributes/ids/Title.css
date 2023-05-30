@@ -3,11 +3,16 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    height:calc(100vh - 1cm);
 }
 
 #PictureContainer > img {
-    width:100%;
+    width:auto;
     height:auto;
+    min-width:100%;
+    min-height:100%;
+    object-fit:cover;
     margin:0;
     background-size: cover;
     background-attachment: fixed;

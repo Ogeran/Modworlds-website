@@ -1,0 +1,172 @@
+#accIcon {
+    position: fixed;
+    margin:0.5cm;
+    overflow: hidden;
+    color: dodgerblue;
+    background-color: white;
+    height:1.5cm;
+    width:1.5cm;
+    font-size: 2.5cm;
+    border-radius:500cm;
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    z-index: 101;
+}
+
+#sidebar {
+    width:30vw;
+    height:100vh;
+
+    border-top-right-radius:1cm;
+    border-bottom-right-radius:1cm;
+
+    background-color: white;
+    box-shadow:0 0 0.75cm rgba(0,0,0,0.3);
+
+    position: fixed;
+
+    z-index:100;
+
+    transform: translateX(-30vw);
+    transition: transform 0.5s ease-in-out;
+
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#login {
+
+    width:10.5vw;
+    height:1cm;
+
+    margin-left:3vw;
+    margin-right:1.5vw;
+
+    margin-top:2.5cm;
+
+    background-color: lightgreen;
+    border:0;
+    border-radius:0.5cm;
+
+    color:white;
+
+    font-size:0.5cm;
+
+    cursor: pointer;
+
+    transition:0.4s;
+}
+
+#login:hover {
+    background-color: white;
+    color: lightgreen;
+
+    border:0.1cm solid lightgreen;
+    
+    font-size:0.4cm;
+}
+
+#register {
+
+    width:10.5vw;
+    height:1cm;
+
+    margin-left:1.5vw;
+    margin-right:3vw;
+
+    margin-top:2.5cm;
+
+    background-color: dodgerblue;
+    border:0;
+    border-radius:0.5cm;
+
+    color: white;
+
+    font-size:0.5cm;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+#register:hover {
+    background-color: white;
+    color: dodgerblue;
+
+    border:0.1cm solid dodgerblue;
+    
+    font-size:0.4cm;
+}
+
+#loginScreen {
+    position: fixed;
+    width:35vw;
+    height:auto;
+    box-shadow:0 0 0.75cm rgba(0,0,0,0.3);
+
+    background-color:white;
+
+    margin-left:32.5vw;
+    margin-top:calc((100vh - 35vw)/2);
+
+    border-radius:0.5cm;
+
+    z-index: 102;
+}
+
+#loginScreen > p {
+    margin:0.5cm;
+    color:dodgerblue;
+}
+
+#loginScreen > input {
+    width:30vw;
+    margin-left:0.5cm;
+    border:0;
+    
+    border-bottom:0.1cm solid dodgerblue;
+    margin-bottom:5vw;
+
+    color:dodgerblue;
+}
+
+#buttonContainer {
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:0.5cm;
+}
+
+#agree {
+    width:15vw;
+    height:2.5vw;
+
+    margin-left:0.5cm;
+    margin-right:auto;
+    
+    border:0;
+    border-radius:1.25vw;
+
+    color:white;
+
+    background-color:lightgreen;
+
+    cursor: pointer;
+}
+
+#forgot {
+    width:15vw;
+    height:2.5vw;
+    
+    margin-right:0.5cm;
+    
+    border:0;
+    border-radius:1.25vw;
+
+    color:white;
+
+    background-color:dodgerblue;
+
+    cursor: pointer;
+}
