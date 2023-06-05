@@ -6,39 +6,66 @@
 
         <meta charset="UTf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewpoint" content="width=device-widyh, initial-scale=1.0">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="../../recources/attributes/ids/nav.css">
         <link rel="stylesheet" href="../../recources/attributes/ids/Title.css">
         <link rel="stylesheet" href="../../recources/attributes/ids/deco.css">
         <link rel="stylesheet" href="../../recources/attributes/ids/footer.css">
 
-        <link rel="stylesheet" href="../../recources/attributes/classes/picktureBacks.css">
+        <link rel="stylesheet" href="../../recources/attributes/classes/pictureBacks.css">
 
         <link rel="stylesheet" href="../../recources/attributes/modifiers.css">
         <link rel="stylesheet" href="../../recources/attributes/ids/sidebar.css">
+        <link rel="stylesheet" href="../../recources/attributes/ids/overlays.css">
 
         <script src="../../recources/scripts/navbarManager.js"></script>
         <script src="../../recources/scripts/sidebarSlider.js"></script>
+        <script src="../../recources/scripts/login.js"></script>
         
     </head>
     <body id="null">
-        <img id="accIcon"></img>
+        <img id="accIcon" onclick="toggleSidebar()"></img>
         <div id="sidebar">
-            <button id="login">Login</button>
-            <button id="register">Register</button>
+
+            <p id="name">
+                Guest
+            </p>
+
+            <button id="login" onclick="OpenLogin()">Login</button>
+            <button id="register" onclick="OpenRegister()">Register</button>
+
+            <div id="container">
+                <p class="log ; invisible" id ="settings">Settings</p>
+                <p class="log ; invisible" id="rank">Rank: NONE</p>
+            </div>
         </div>
 
         <div id="loginScreen">
-            <p>Mail:</p>
-            <input type="email">
+            <p>Email:</p>
+            <input type="email" id="EM">
             <p>Passwort:</p>
-            <input type="password">
+            <input type="password" id="PW">
             
             <div id="buttonContainer">
-                <button id="agree">Login</button>
+                <button type="submit" id="agreeL" onclick="login()">Login</button>
                 <button id="forgot">Forgot Passwort</button>
             </div>
+
+            <button onclick="CloseLogin()">x</button>
+        </div>
+
+        <div id="registerScreen">
+            <p>Email:</p>
+            <input type="email" id="REM">
+            <p>Passwort:</p>
+            <input type="password" id="RPW1">
+            <p>Repeat Passwort:</p>
+            <input type="password" id="RPW2">
+            
+            <button type="submit" id="agreeR" onclick="register()">Register</button>
+
+            <button onclick="CloseRegister()">x</button>
         </div>
 
         <div>

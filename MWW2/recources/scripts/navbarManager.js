@@ -2,11 +2,11 @@ function manageNavBar(element) {
     var e = element.id;
     var pre = document.getElementById(e).previousElementSibling;
 
-    e = pre.id;
-
     if(pre == null) {
         return;
     }
+
+    e = pre.id;
     pre.id = "edit";
 
     document.getElementById("edit").style.borderBottomRightRadius = '0.5cm';
