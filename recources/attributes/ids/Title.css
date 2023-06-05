@@ -1,0 +1,32 @@
+#PictureContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height:calc(100vh - 1cm);
+}
+
+#PictureContainer > img {
+    width:auto;
+    height:auto;
+    min-width:100%;
+    min-height:100%;
+    object-fit:cover;
+    margin:0;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#PictureContainer > a {
+    position:absolute;
+    height: auto;
+    width:auto;
+    color:white;
+    font-size:8.5vw;
+    transition: all ease 1.5s;
+}
+
+#PictureContainer > a:hover {
+    transform: scale(1.25);
+}

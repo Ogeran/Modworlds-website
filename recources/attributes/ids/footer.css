@@ -1,0 +1,43 @@
+#footer-container {
+    background-color: dodgerblue;
+    width:100%;
+    margin-top:7.5vw;
+
+    display: flex;
+    flex-wrap: nowrap;
+    
+    align-items: center;
+}
+
+#footer-container > img {
+    margin:5vw;
+    width:15vw;
+}
+
+#footer-container > a {
+    margin:5vw;
+    width:15vw;
+    height:15vw;
+    background-color: white;
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer-container > a > img {
+    width:50%;
+    transition: 1s;
+}
+
+#footer-container > a > img:hover {
+    transform: scale(1.25);
+}
+
+#footer-container > div {
+    width:50vw;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

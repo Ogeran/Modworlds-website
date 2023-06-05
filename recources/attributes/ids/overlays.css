@@ -1,0 +1,227 @@
+#loginScreen {
+    position: fixed;
+    width:35vw;
+    height:auto;
+    box-shadow:0 0 0.75cm rgba(0,0,0,0.3);
+
+    background-color:white;
+
+    margin-left:32.5vw;
+    margin-top:calc((100vh - 35vw)/2);
+
+    border-radius:0.5cm;
+
+    z-index: 102;
+
+    display:none;
+    opacity:0;
+
+    transition: opacity 1s ease-in-out;
+
+    color:dodgerblue;
+}
+
+#loginScreen > p {
+    margin:0.5cm;
+}
+
+#loginScreen > input {
+    width:30vw;
+    margin-left:0.5cm;
+    border:0;
+    
+    border-bottom:0.1cm solid dodgerblue;
+    margin-bottom:5vw;
+
+    color:dodgerblue;
+}
+
+#loginScreen > button {
+    position:fixed;
+
+    height:3vw;
+    width:3vw;
+
+    margin:0.25cm;
+
+    color:dodgerblue;
+    
+    right:32.25vw;
+    top:calc((100vh - 35vw)/2);
+
+    border:0;
+
+    background-color:rgba(0,0,0,0);
+
+    cursor: pointer;
+}
+
+#loginScreen > #buttonContainer {
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:0.5cm;
+}
+
+#loginScreen > #buttonContainer > #agreeL {
+    width:15vw;
+    height:2.5vw;
+
+    margin-left:0.5cm;
+    margin-right:auto;
+    
+    border:0;
+    border-radius:1.25vw;
+
+    color:white;
+
+    background-color:lightgreen;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+#loginScreen > #buttonContainer > #forgot {
+    width:15vw;
+    height:2.5vw;
+    
+    margin-right:0.5cm;
+    
+    border:0;
+    border-radius:1.25vw;
+
+    color:white;
+
+    background-color:dodgerblue;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+#loginScreen > #buttonContainer > #agreeL:hover {
+    background-color: white;
+    color: lightgreen;
+
+    border:0.1cm solid lightgreen;
+    
+    font-size:0.4cm;
+}
+
+#loginScreen > #buttonContainer > #forgot:hover {
+    background-color: white;
+    color: dodgerblue;
+
+    border:0.1cm solid dodgerblue;
+    
+    font-size:0.4cm;
+}
+
+#registerScreen {
+    position: fixed;
+    width:35vw;
+    height:auto;
+    box-shadow:0 0 0.75cm rgba(0,0,0,0.3);
+
+    background-color:white;
+
+    margin-left:32.5vw;
+    margin-top:calc((100vh - 35vw)/2);
+
+    border-radius:0.5cm;
+
+    z-index: 102;
+
+    display:none;
+    opacity:0;
+
+    transition: color 0.25s ease-in-out;
+    transition: opacity 1s ease-in-out;
+
+    color:dodgerblue;
+}
+
+#registerScreen > p {
+    margin:0.5cm;
+    transition: color 0.25s ease-in-out;
+}
+
+#registerScreen > input {
+    width:30vw;
+    margin-left:0.5cm;
+    border:0;
+    
+    border-bottom:0.1cm solid;
+    border-color: dodgerblue;
+    margin-bottom:5vw;
+
+    color:dodgerblue;
+
+    transition: border-color 0.25s ease-in-out;
+}
+
+#registerScreen > button {
+    position:fixed;
+
+    height:3vw;
+    width:3vw;
+
+    margin:0.25cm;
+
+    color:dodgerblue;
+    
+    right:32.25vw;
+    top:calc((100vh - 35vw)/2);
+
+    border:0;
+
+    background-color:rgba(0,0,0,0);
+
+    cursor: pointer;
+}
+
+#registerScreen > #agreeR {
+    position:static;
+
+    width:calc(35vw - 1cm);
+    height:2.5vw;
+
+    margin-left:0.5cm;
+    margin-right:0.5cm;
+    margin-bottom:0.5cm;
+    
+    border:0;
+    border-radius:1.25vw;
+
+    color:white;
+
+    background-color:lightgreen;
+
+    cursor: pointer;
+
+    transition: background-color 0.4s ease-in-out;
+    transition: font-size 0.4s ease-in-out;
+}
+
+#registerScreen > #agreeR:hover {
+    background-color: white;
+    color: lightgreen;
+
+    border:0.1cm solid lightgreen;
+    
+    font-size:0.4cm;
+}
+
+#logout {
+    color: crimson;
+    font-size:0.35cm;
+
+    cursor: pointer;
+
+    transition:0.25s;
+}
+
+#logout:hover {
+    color:red;
+}
+
