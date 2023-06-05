@@ -1,0 +1,33 @@
+.pictureLeftOrigin {
+    width:90vw;
+    height:auto;
+    background-attachment: fixed;
+    border-top-right-radius:2cm;
+    border-bottom-right-radius:2cm;
+    margin-top:7.5vw;
+    background-size: cover;
+}
+
+.pictureRightOrigin {
+    margin-left:10vw;
+    width:90vw;
+    height:auto;
+    background-attachment: fixed;
+    border-top-left-radius:2cm;
+    border-bottom-left-radius:2cm;
+    margin-top:7.5vw;
+    background-size: cover;
+}
+
+.pictureLeftOrigin > div,
+.pictureRightOrigin > div {
+    padding:5vw;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}

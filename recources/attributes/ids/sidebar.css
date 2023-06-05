@@ -1,0 +1,132 @@
+#accIcon {
+    position: fixed;
+    margin:0.5cm;
+    overflow: hidden;
+    color: dodgerblue;
+    background-color: white;
+    height:1.5cm;
+    width:1.5cm;
+    font-size: 2.5cm;
+    border-radius:500cm;
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    z-index: 101;
+}
+
+#sidebar {
+    width:30vw;
+    height:100vh;
+
+    border-top-right-radius:1cm;
+    border-bottom-right-radius:1cm;
+
+    background-color: white;
+    box-shadow:0 0 0.75cm rgba(0,0,0,0.3);
+
+    position: fixed;
+
+    z-index:100;
+
+    transform: translateX(-30vw);
+    transition: transform 0.5s ease-in-out;
+
+    display: flex;
+    flex-wrap: nowrap;
+    
+}
+
+#sidebar > #name {
+    position:absolute;
+    height:1.5cm;
+    width:calc(30vw - 3cm);
+    color:dodgerblue;
+    margin-left:2.5cm;
+    margin-bottom:2cm;
+
+    font-size:0.5cm;
+    text-align:left;
+}
+
+#login {
+
+    width:10.5vw;
+    height:1cm;
+
+    margin-left:3vw;
+    margin-right:1.5vw;
+
+    margin-top:2.5cm;
+
+    background-color: lightgreen;
+    border:0;
+    border-radius:0.5cm;
+
+    color:white;
+
+    font-size:0.5cm;
+
+    cursor: pointer;
+
+    transition:0.4s;
+}
+
+#login:hover {
+    background-color: white;
+    color: lightgreen;
+
+    border:0.1cm solid lightgreen;
+    
+    font-size:0.4cm;
+}
+
+#register {
+
+    width:10.5vw;
+    height:1cm;
+
+    margin-left:1.5vw;
+    margin-right:3vw;
+
+    margin-top:2.5cm;
+
+    background-color: dodgerblue;
+    border:0;
+    border-radius:0.5cm;
+
+    color: white;
+
+    font-size:0.5cm;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+#register:hover {
+    background-color: white;
+    color: dodgerblue;
+
+    border:0.1cm solid dodgerblue;
+    
+    font-size:0.4cm;
+}
+
+#container {
+    display: flex;
+    flex-wrap:wrap;
+}
+
+#rank {
+    margin-top: 2.5cm;
+    margin-left:0.5cm;
+    color: dodgerblue;
+}
+
+#settings {
+    margin-top: 2.5cm;
+    margin-left:0.5cm;
+    width:100%;
+    height:1cm;
+}
