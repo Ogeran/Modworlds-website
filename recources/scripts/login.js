@@ -117,9 +117,11 @@ function addAccount(mail, passwort) {
 
 function logout() {
 
+    console.log("Logging out");
+
     fetch(`cookie/remove?param1=logged`)
     .catch(error => {
-        console.error('Error getting cookie:', error);
+        console.error('Error removing cookie:', error);
     });
 
     const name = document.getElementById("name");

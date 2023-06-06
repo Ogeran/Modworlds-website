@@ -112,9 +112,9 @@ function toggleLoggedMode() {
         fetch('cookie/get?param1=logged')
         .then(response => {
             if (response.ok) {
-            return response.json();
+                return response.json();
             } else {
-            throw new Error('Error getting cookie');
+                throw new Error('Error getting cookie');
             }
         })
         .then(cookieValue => {

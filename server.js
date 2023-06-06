@@ -131,8 +131,10 @@ app.get('*', (req, res) => {
             const cookieValue = req.cookies[cookieName];
 
             if (cookieValue) {
+                console.log("Sending cookie: " + JSON.stringify(cookieValue));
                 res.send(JSON.stringify(cookieValue));
             } else {
+                console.log("Cookie not found");
                 res.send('Cookie not found');
             }
         }
