@@ -109,35 +109,20 @@ function toggleLoggedMode() {
     else if(logged == false) {
         logged = true;
 
-        fetch('cookie/get?param1=logged')
+        fetch(`api/getRank?param1=${username}&param2=${typedPassword}`)
         .then(response => {
             if (response.ok) {
-                return response.json();
+                return response.text();
             } else {
-                throw new Error('Error getting cookie');
+                throw new Error('Error calling server-side function');
             }
         })
-        .then(cookieValue => {
-
-            fetch(`api/getRank?param1=${JSON.parse(cookieValue).rank}`)
-            .then(response2 => {
-                if (response2.ok) {
-                    return response2.text();
-                } else {
-                    throw new Error('Error getting cookie');
-                }
-            })
-            .then(rankName => {
-                const r = document.getElementById("rank");
-                r.textContent = `Rank: ${rankName}`; 
-                console.log("Updated name to: " + rankName);
-            })
-            .catch(error => {
-                console.error('Error getting cookie:', error);
-            });
+        .then(rankName => {
+            const rankNameField = document.getElementById("rank");
+            rankNameField.innerText = `Rank: ${rankName}`;
         })
         .catch(error => {
-            console.error('Error getting cookie:', error);
+            console.error('Error calling server-side function:', error);
         });
 
         const invises = document.getElementsByClassName("invisible");
