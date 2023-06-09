@@ -57,6 +57,9 @@ app.get('*', (req, res) => {
             
             getRank(req, res);
         }
+        else if(filePath.includes('api/setProfilePicture')) {
+            setProfilePicture(req, res);
+        }
     }
 });
 
@@ -81,7 +84,8 @@ function addAccount(req, res) {
             [mail] : {
                 "password": String(password),
                 "rank": 0,
-                "projects": []
+                "projects": [],
+                "profilePicture":""
             }
         };
 
@@ -153,6 +157,35 @@ function getRank(req, res) {
         }
 
         res.send("NONE");
+    });
+}
+
+function setProfilePicture(req, res) {
+    const name = req.query.param1;
+    const password = req.query.param2;
+    const PBpath = req.query.param3;
+
+    fs.readFile('data/accounts.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+
+        const json = JSON.parse(data);
+        
+        for(var i = 0; i < json.accounts.length; i++) {
+            if (json.accounts[i] != null) {
+                if (json.accounts[i][name] != null) {
+                    if(String(json.accounts[i][name].password) == String(hashCode(password))) {
+                        json.accounts[i][name].profilePicture = PBpath;
+
+                        const updated = JSON.stringify(json);
+
+                        fs.writeFileSync('data/accounts.json', updated, 'utf8');
+                    }
+                }
+            }
+        }
     });
 }
 

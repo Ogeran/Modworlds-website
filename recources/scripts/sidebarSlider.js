@@ -95,6 +95,9 @@ function toggleLoggedMode() {
     if(logged == true) {
         logged = false;
 
+        const PB = document.getElementById("accIcon");
+        const BigPB = document.getElementById("PBbig");
+
         const invises = document.getElementsByClassName("log");
         Array.from(invises).forEach(element => {
             element.classList.add('invisible');
@@ -108,6 +111,31 @@ function toggleLoggedMode() {
     }
     else if(logged == false) {
         logged = true;
+
+        const PB = document.getElementById("accIcon");
+        const BigPB = document.getElementById("PBbig");
+
+        fetch(`api/getAccount?param1=${username}`)
+        .then(response => {
+            if(response.ok) {
+                return response.json();
+            }
+            else {
+                throw new Error('Error calling server-side function');
+            }
+        })
+        .then(acc => {
+            if(acc == null) {
+                console.log("No account");
+                return;
+            }
+
+            PB.src = acc.profilePicture;
+            BigPB = acc.profilePicture;
+        })
+        .catch(error => {
+            console.error("Error while getting account: " + error);
+        });
 
         fetch(`api/getRank?param1=${username}&param2=${typedPassword}`)
         .then(response => {

@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="../../recources/attributes/ids/Title.css">
         <link rel="stylesheet" href="../../recources/attributes/ids/deco.css">
         <link rel="stylesheet" href="../../recources/attributes/ids/footer.css">
+        <link rel="stylesheet" href="../../recources/attributes/ids/settings.css">
 
         <link rel="stylesheet" href="../../recources/attributes/classes/pictureBacks.css">
 
@@ -22,10 +23,11 @@
         <script src="../../recources/scripts/navbarManager.js"></script>
         <script src="../../recources/scripts/sidebarSlider.js"></script>
         <script src="../../recources/scripts/login.js"></script>
+        <script src="../../recources/scripts/settingsManager.js"></script>
         
     </head>
     <body id="null">
-        <img id="accIcon" onclick="toggleSidebar()"></img>
+        <img id="accIcon" onclick="toggleSidebar()">
         <div id="sidebar">
 
             <p id="name">
@@ -36,11 +38,10 @@
             <button id="register" onclick="OpenRegister()">Register</button>
 
             <div id="container">
-                <p class="log ; invisible" id ="settings">Settings</p>
+                <p class="log ; invisible" id ="settings" onclick="toggleSettings()">Settings</p>
                 <p class="log ; invisible" id="rank">Rank:</p>
             </div>
         </div>
-
         <div id="loginScreen">
             <p>Username:</p>
             <input type="email" id="UN">
@@ -66,6 +67,17 @@
             <button type="submit" id="agreeR" onclick="register()">Register</button>
 
             <button onclick="CloseRegister()">x</button>
+        </div>
+
+        <div id="settingsContainer">
+            <a onclick="toggleSettings()">x</a>
+            <img id="PBbig" onclick="slideTogglePBCollection()">
+            <img id="PBbigEditIcon" src="../../recources/graphics/icons/pencil.png" onclick="slideTogglePBCollection()">
+        </div>
+
+        <div id="PBcollection">
+            <img class="pb" src="../../recources/graphics/profilePictures/white.png" onclick="setProfilePicture('../../recources/graphics/profilePictures/white.png')">
+            <img class="pb" src="../../recources/graphics/profilePictures/OgeranWithTNT.jpg" onclick="setProfilePicture('../../recources/graphics/profilePictures/OgeranWithTNT.jpg')">
         </div>
 
         <div>

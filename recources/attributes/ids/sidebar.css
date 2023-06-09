@@ -34,7 +34,7 @@
 
     display: flex;
     flex-wrap: nowrap;
-    
+    justify-content: left;
 }
 
 #sidebar > #name {
@@ -116,17 +116,48 @@
 #container {
     display: flex;
     flex-wrap:wrap;
+    justify-content: left;
 }
 
 #rank {
-    margin-top: 2.5cm;
+    margin-top: 3.75cm;
     margin-left:0.5cm;
     color: dodgerblue;
+    position:absolute;
+    width:100%;
+    height:1cm;
 }
 
 #settings {
     margin-top: 2.5cm;
     margin-left:0.5cm;
-    width:100%;
-    height:1cm;
+    width:auto;
+    height:auto;
+    color: white;
+    position:absolute;
+
+    cursor: pointer;
+
+    border: 0cm white solid;
+    border-radius:0.25cm;
+
+    justify-content: center;
+    align-items: center;
+
+    padding:0.1cm;
+
+    background-color: dodgerblue;
+
+    transition:0.4s;
+
+    padding:0.1cm;
+}
+
+#settings:hover {
+    border: 0.1cm dodgerblue solid;
+    margin-left:0.4cm;
+    margin-top:2.4cm;
+
+    background-color: white;
+    color: dodgerblue;
 }

@@ -1,0 +1,102 @@
+#settingsContainer {
+    width: 75vw;
+    height:75vh;
+    position: fixed;
+
+    margin-top:12.5vh;
+    margin-left:12.5vw;
+
+    background-color: white;
+    box-shadow:0 0 0.75cm rgba(0,0,0,0.3);
+
+    border-radius:1cm;
+
+    z-index:900;
+
+    transform:translateY(-100vh);
+
+    transition: 1s ease-in-out;
+}
+
+#settingsContainer > p {
+    margin:1cm;
+    color: dodgerblue;
+}
+
+#settingsContainer > a {
+    position:absolute;
+
+    height:auto;
+    width:auto;
+
+    margin:0.5cm;
+
+    color:dodgerblue;
+
+    top:0;
+    right:0;
+
+    border:0;
+
+    background-color:rgba(0,0,0,0);
+
+    cursor: pointer;
+}
+
+#PBbig {
+    width:10vw;
+    aspect-ratio:1/1;
+
+    margin:1cm;
+    border:0.1cm dodgerblue solid;
+    border-radius:10vw;
+}
+
+#PBbigEditIcon {
+    width:5vw;
+    aspect-ratio:1/1;
+
+    margin:calc(1.1cm + 2.5vw);
+
+    position: relative;
+    left:calc((10vw + 2.35cm) * -1);
+
+    opacity:0.75;
+
+    color: dodgerblue;
+
+}
+
+#PBcollection {
+    overflow-y: scroll;
+    width: 77.45vw;
+    height:75vh;
+    margin-top:12.5vh;
+    margin-left:12.5vw;
+
+    position: fixed;
+
+    background-color:white;
+
+    z-index: 1000;
+    box-shadow:0 0 0.75cm rgba(0,0,0,0.3);
+    border-radius:1cm;
+
+    transform:translateY(-100vh);
+
+    transition:1s ease-in-out;
+}
+
+.pb {
+    width:9vw;
+    aspect-ratio:1/1;
+
+    margin:2.45vw;
+
+    border:0.5vw dodgerblue solid;
+
+    border-radius:8vw;
+
+    cursor: pointer;
+}
+

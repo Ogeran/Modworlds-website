@@ -55,6 +55,7 @@ function login() {
 
         if(String(hashCode(password)) === String(acc.password)) {
             const name = document.getElementById("name");
+
             name.innerText = user;
             name.innerHTML += `<br> <a id="logout" onclick="logout()">Log out</a>`;
 
@@ -98,6 +99,12 @@ function logout() {
     const name = document.getElementById("name");
     name.innerHTML = "";
     name.innerText = "Guest";
+
+    const PB = document.getElementById("accIcon");
+    const BigPB = document.getElementById("PBbig");
+
+    PB.src = `../../recources/graphics/profilePictures/white.png`;
+    BigPB.src = `../../recources/graphics/profilePictures/white.png`;
 
     toggleLoggedMode();
 }
