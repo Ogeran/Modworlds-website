@@ -131,7 +131,7 @@ function toggleLoggedMode() {
             }
 
             PB.src = acc.profilePicture;
-            BigPB = acc.profilePicture;
+            BigPB.src = acc.profilePicture;
         })
         .catch(error => {
             console.error("Error while getting account: " + error);

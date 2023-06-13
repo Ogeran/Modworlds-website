@@ -18,11 +18,6 @@
     transition: 1s ease-in-out;
 }
 
-#settingsContainer > p {
-    margin:1cm;
-    color: dodgerblue;
-}
-
 #settingsContainer > a {
     position:absolute;
 
@@ -50,6 +45,8 @@
     margin:1cm;
     border:0.1cm dodgerblue solid;
     border-radius:10vw;
+
+    cursor: pointer;
 }
 
 #PBbigEditIcon {
@@ -64,6 +61,8 @@
     opacity:0.75;
 
     color: dodgerblue;
+
+    cursor: pointer;
 
 }
 
@@ -98,5 +97,110 @@
     border-radius:8vw;
 
     cursor: pointer;
+}
+
+#PWresetOriginal {
+    border:0;
+    border-bottom:solid 0.1cm lightcoral;
+    width: 30%;
+
+    position:absolute;
+    right:5%;
+    top:10%;
+}
+
+#PWT1 {
+    color: lightcoral;
+    position:absolute;
+    top:5%;
+    width:30%;
+    right:5%;
+    margin:0;
+}
+#PWresetNew1 {
+    border:0;
+    border-bottom:solid 0.1cm lightcoral;
+    width: 30%;
+
+    position:absolute;
+    right:5%;
+    top:25%;
+}
+
+#PWT2 {
+    color: lightcoral;
+    position:absolute;
+    top:20%;
+    width:30%;
+    right:5%;
+    margin:0;
+}
+#PWresetNew2 {
+    border:0;
+    border-bottom:solid 0.1cm lightcoral;
+    width: 30%;
+
+    position:absolute;
+    right:5%;
+    top:40%;
+}
+
+#PWT3 {
+    color: lightcoral;
+    position:absolute;
+    top:35%;
+    width:30%;
+    right:5%;
+    margin:0;
+}
+
+#SetPasswortBTN {
+    width:30%;
+    position: absolute;
+    top:50%;
+    right:5%;
+    height:0.75cm;
+    color: white;
+    background-color:lightcoral;
+    border:0;
+    border-radius:10000cm;
+
+    transition:0.4s;
+
+    cursor: pointer;
+}
+
+#SetPasswortBTN:hover {
+    width:30%;
+    position: absolute;
+    top:50%;
+    right:5%;
+    color:lightcoral;
+    background-color:white;
+    border:0;
+    border-radius:10000cm;
+    border:0.1cm solid lightcoral;
+}
+
+#deleteBTN {
+    background-color:lightcoral;
+    color:white;
+    position:absolute;
+    right:5%;
+    bottom:5%;
+
+    height:1cm;
+
+    width:30%;
+
+    border:0;
+    border-radius:1cm;
+
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+#deleteBTN:hover {
+    background-color: red;
 }
 

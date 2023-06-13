@@ -34,10 +34,14 @@ function register() {
     });
 }
 
-function login() {
+function login(user, password) {
     
-    const user = document.getElementById("UN").value;
-    const password = document.getElementById("PW").value;
+    if(!user & !password) {
+        user = document.getElementById("UN").value;
+        password = document.getElementById("PW").value;
+    }
+
+    console.log(`User: ${user}\nPassword: ${password}`);
 
     fetch(`api/getAccount?param1=${user}`)
     .then(response => {
@@ -50,7 +54,7 @@ function login() {
     .then(acc => {
         if(acc == null) {
             blinkRed();
-            return
+            return;
         }
 
         if(String(hashCode(password)) === String(acc.password)) {
@@ -61,6 +65,11 @@ function login() {
 
             username = user;
             typedPassword = password;
+
+            const value = `${user}+${password}`;
+            const expire = new Date().setDate(new Date().getDate() + 30);
+
+            document.cookie = `log=${value}; expires=${expire}; path=/`;
 
             toggleLoggedMode();
             CloseLogin();
@@ -106,6 +115,7 @@ function logout() {
     PB.src = `../../recources/graphics/profilePictures/white.png`;
     BigPB.src = `../../recources/graphics/profilePictures/white.png`;
 
+    deleteCookie("log");
     toggleLoggedMode();
 }
 
@@ -142,4 +152,34 @@ function hashCode(string){
         hash = hash & hash;
     }
     return hash;
+}
+
+function handleLoad() {
+    console.log(`Handling... ${document.cookie}`);
+    if(getCookieValue("log")) {
+        var elements = getCookieValue("log");
+        elements = elements.split('+');
+        username = elements[0]
+        typedPassword = elements[1];
+
+        login(username, typedPassword);
+
+        console.log(`Logged in with username ${username} and password ${typedPassword}`);
+    }
+    console.log("Done");
+}
+
+function getCookieValue(cookieName) {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.startsWith(cookieName + '=')) {
+            return cookie.substring(cookieName.length + 1);
+        }
+    }
+    return null;
+}
+
+function deleteCookie(cookieName) {
+    document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
 }

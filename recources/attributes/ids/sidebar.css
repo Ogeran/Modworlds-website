@@ -120,7 +120,7 @@
 }
 
 #rank {
-    margin-top: 3.75cm;
+    margin-top: 2.5cm;
     margin-left:0.5cm;
     color: dodgerblue;
     position:absolute;
@@ -129,9 +129,9 @@
 }
 
 #settings {
-    margin-top: 2.5cm;
-    margin-left:0.5cm;
-    width:auto;
+    bottom:1cm;
+    left:0.5cm;
+    width:calc(100% - 1cm);
     height:auto;
     color: white;
     position:absolute;
@@ -143,6 +143,7 @@
 
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     padding:0.1cm;
 
@@ -155,9 +156,33 @@
 
 #settings:hover {
     border: 0.1cm dodgerblue solid;
-    margin-left:0.4cm;
-    margin-top:2.4cm;
+    left:0.4cm;
+    bottom:0.9cm;
 
     background-color: white;
     color: dodgerblue;
+}
+
+#container > a {
+    position:absolute;
+    color:dodgerblue;
+    width:30vw;
+    text-align: center;
+    bottom:0.5cm;
+    left:0;
+    cursor: pointer;
+}
+
+#xp_bar {
+    position: absolute;
+    top:3cm;
+    width:calc(100% - 1.2cm);
+    min-height:0.5cm;
+    left:0.5cm;
+    border:0.1cm solid dodgerblue;
+    border-radius:0.5cm;
+
+    background-color:lightgreen;
+    text-align: center;
+    color:white;
 }

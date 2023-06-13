@@ -26,7 +26,7 @@
         <script src="../../recources/scripts/settingsManager.js"></script>
         
     </head>
-    <body id="null">
+    <body id="null" onload="handleLoad()">
         <img id="accIcon" onclick="toggleSidebar()">
         <div id="sidebar">
 
@@ -40,6 +40,8 @@
             <div id="container">
                 <p class="log ; invisible" id ="settings" onclick="toggleSettings()">Settings</p>
                 <p class="log ; invisible" id="rank">Rank:</p>
+                <p id="xp_bar">100%</p>
+                <a>Discord</a>
             </div>
         </div>
         <div id="loginScreen">
@@ -73,11 +75,27 @@
             <a onclick="toggleSettings()">x</a>
             <img id="PBbig" onclick="slideTogglePBCollection()">
             <img id="PBbigEditIcon" src="../../recources/graphics/icons/pencil.png" onclick="slideTogglePBCollection()">
+
+            <p id="PWT1">Password:</p>
+            <input id="PWresetOriginal">
+            <p id="PWT2">New Password:</p>
+            <input id="PWresetNew1">
+            <p id="PWT3">New Password:</p>
+
+            <button id="SetPasswortBTN">Change Password</button>
+            <button id="deleteBTN" onclick="deleteAccount()">Delete Account</button>
+
+            <input id="PWresetNew2">
         </div>
 
         <div id="PBcollection">
             <img class="pb" src="../../recources/graphics/profilePictures/white.png" onclick="setProfilePicture('../../recources/graphics/profilePictures/white.png')">
             <img class="pb" src="../../recources/graphics/profilePictures/OgeranWithTNT.jpg" onclick="setProfilePicture('../../recources/graphics/profilePictures/OgeranWithTNT.jpg')">
+            <img class="pb" src="../../recources/graphics/profilePictures/metro_pb.jpg" onclick="setProfilePicture('../../recources/graphics/profilePictures/metro_pb.jpg')">
+            <img class="pb" src="../../recources/graphics/profilePictures/" onclick="setProfilePicture('../../recources/graphics/profilePictures/')">
+            <img class="pb" src="../../recources/graphics/profilePictures/" onclick="setProfilePicture('../../recources/graphics/profilePictures/')">
+            <img class="pb" src="../../recources/graphics/profilePictures/" onclick="setProfilePicture('../../recources/graphics/profilePictures/')">
+            <img class="pb" src="../../recources/graphics/profilePictures/" onclick="setProfilePicture('../../recources/graphics/profilePictures/')">
         </div>
 
         <div>
