@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 var collectionThere = false;
 var settingsThere = false;
 
@@ -55,6 +53,8 @@ function changePassword() {
     const pwNew1 = document.getElementById("PWresetNew1").value;
     const pwNew2 = document.getElementById("PWresetNew2").value;
 
+    console.log("Changing password");
+
     fetch(`api/changePassword?param1=${username}&param2=${typedPassword}&param3=${pwNew1}&param4=${pwNew2}`)
     .then(response => {
         if(response.ok) {
@@ -65,10 +65,23 @@ function changePassword() {
         }
     })
     .then(result => {
+        console.log(result);
         if(result == "pass") {
             document.getElementById("PWresetOriginal").value = "";
             document.getElementById("PWresetNew1").value = "";
+            
+            deleteCookie("log");
+
+            const value = `${username}+${document.getElementById("PWresetNew2").value}`;
+            const expire = new Date().setDate(new Date().getDate() + 30);
+
+            document.cookie = `log=${value}; expires=${expire}; path=/`;
+
+            typedPassword = document.getElementById("PWresetNew2").value;
+
             document.getElementById("PWresetNew2").value = "";
+
+            blinkGreen();
         }
     })
     .catch(error => {
@@ -77,7 +90,7 @@ function changePassword() {
 }
 
 function deleteAccount() {
-    fetch(`api/changePassword?param1=${username}&param2=${typedPassword}`)
+    fetch(`api/deleteAccount?param1=${username}&param2=${typedPassword}`)
     .then(response => {
         if(response.ok) {
             return response.text();
@@ -89,9 +102,15 @@ function deleteAccount() {
     .then(result => {
         if(result == "pass") {
             logout();
+            toggleSettings();
+            
         }
     })
     .catch(error => {
         console.error("Error while changing password: " + error);
     });
+}
+
+function blinkGreen() {
+
 }

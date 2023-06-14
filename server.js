@@ -83,7 +83,7 @@ app.get('*', (req, res) => {
             changePassword(req, res);
         }
         else if(filePath.includes('api/deleteAccount')) {
-
+            deleteAccount(req, res);
         }
     }
 });
@@ -243,14 +243,27 @@ function changePassword(req, res) {
                             res.send("pass");
                             return;
                         }
+                        else {
+                            res.send("fail");
+                            return;
+                        }
                     }
+                    else {
+                        res.send("fail");
+                        return;
+                    }
+                }
+                else {
+                    res.send("fail");
+                    return;
                 }
             }
         });
     }
-
-    res.send("fail");
-    return;
+    else {
+        res.send("fail");
+        return;
+    }
 }
 
 function deleteAccount(req, res) {
@@ -269,7 +282,7 @@ function deleteAccount(req, res) {
         for(var i = 0; i < json.accounts.length; i++) {
             if (json.accounts[i] != null) {
                 if (json.accounts[i][name] != null) {
-                    if(json.accounts[i][name].password == hashCode(pw)) {
+                    if(json.accounts[i][name].password == hashCode(String(pw))) {
 
                         delete json.accounts[i][name];
 
@@ -286,6 +299,9 @@ function deleteAccount(req, res) {
 }
 
 function hashCode(string){
+    if(string == null) {
+        return -1;
+    }
     var hash = 0;
     for (var i = 0; i < string.length; i++) {
         var code = string.charCodeAt(i);
