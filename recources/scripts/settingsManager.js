@@ -1,7 +1,12 @@
 var collectionThere = false;
 var settingsThere = false;
+var deleteAccountPopupIsThere = false;
 
 function toggleSettings() {
+
+    if(username == null) {
+        return;
+    }
 
     if(settingsThere == false) {
         settingsThere = true;
@@ -15,6 +20,13 @@ function toggleSettings() {
         const settings = document.getElementById("settingsContainer");
         settings.style.transform = 'translateY(-100vh)';
     }
+}
+
+function closeSettings() {
+    settingsThere = false;
+
+    const settings = document.getElementById("settingsContainer");
+    settings.style.transform = 'translateY(-100vh)';
 }
 
 function setProfilePicture(path) {
@@ -90,7 +102,8 @@ function changePassword() {
 }
 
 function deleteAccount() {
-    fetch(`api/deleteAccount?param1=${username}&param2=${typedPassword}`)
+    const pw = document.getElementById("popupPW");
+    fetch(`api/deleteAccount?param1=${username}&param2=${pw.value}`)
     .then(response => {
         if(response.ok) {
             return response.text();
@@ -101,14 +114,27 @@ function deleteAccount() {
     })
     .then(result => {
         if(result == "pass") {
+            closeSettings();
             logout();
-            toggleSettings();
-            
+            togglePopupDeleteAccount()
         }
     })
     .catch(error => {
         console.error("Error while changing password: " + error);
     });
+}
+
+function togglePopupDeleteAccount() {
+    const popup = document.getElementById("pwdeleteDraft");
+
+    if(deleteAccountPopupIsThere == true) {
+        deleteAccountPopupIsThere = false;
+        popup.style.display = 'none';
+    }
+    else if(deleteAccountPopupIsThere == false) {
+        deleteAccountPopupIsThere = true;
+        popup.style.display = 'block';
+    }
 }
 
 function blinkGreen() {

@@ -139,6 +139,8 @@ function getAccount(req, res) {
             return;
         }
 
+        console.log(data);
+
         const json = JSON.parse(data);
 
         for(var i = 0; i < json.accounts.length; i++) {
@@ -233,8 +235,8 @@ function changePassword(req, res) {
             for(var i = 0; i < json.accounts.length; i++) {
                 if (json.accounts[i] != null) {
                     if (json.accounts[i][name] != null) {
-                        if(json.accounts[i][name].password == hashCode(oldPW)) {
-                            json.accounts[i][name].password = hashCode(new1);
+                        if(json.accounts[i][name].password == hashCode(String(oldPW))) {
+                            json.accounts[i][name].password = hashCode(String(new1));
 
                             const updated = JSON.stringify(json);
 

@@ -204,3 +204,69 @@
     background-color: red;
 }
 
+#pwdeleteDraft {
+    position: fixed;
+    background-color: white;
+
+    min-width: 30vw;
+
+    width: auto;
+    height: auto;
+
+    transform: translate(-50%, -50%);
+
+    left:50%;
+    top:50%;
+
+    border-radius:0.5cm;
+
+    z-index: 10000;
+
+    box-shadow:0 0 0.75cm rgba(0,0,0,0.3);
+
+    display:none;
+}
+
+#pwdeleteDraft > p {
+    color:lightcoral;
+    width:90%;
+    height: auto;
+    margin:5%;
+
+    text-align: center;
+}
+
+#pwdeleteDraft > input {
+    border:0;
+    width:80%;
+    margin:10%;
+    margin-top:0;
+    border-bottom:0.1cm solid lightcoral;
+
+    margin-bottom:5%;
+}
+
+#pwdeleteDraft > button {
+    border:0;
+
+    width:35%;
+    color:white;
+    background-color: lightcoral;
+    border-radius:10000cm;
+
+    margin-left: 10%;
+
+    cursor: pointer;
+
+    transform: opacity 0.5s;
+    transition:0.2s;
+
+    margin-bottom:5%;
+
+    padding-top:0.1cm;
+    padding-bottom:0.1cm;
+}
+
+#pwdeleteDraft > button:hover {
+    background-color: red;
+}

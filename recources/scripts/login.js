@@ -31,6 +31,24 @@ function register() {
         else {
             blinkRed();
         }
+    }).then(() => {
+        console.log("logging in from registering");
+        
+        const name = document.getElementById("name");
+
+        name.innerText = user;
+        name.innerHTML += `<br> <a id="logout" onclick="logout()">Log out</a>`;
+
+        username = user;
+        typedPassword = password1;
+
+        const value = `${user}+${password1}`;
+        const expire = new Date().setDate(new Date().getDate() + 30);
+
+        document.cookie = `log=${value}; expires=${expire}; path=/`;
+
+        toggleLoggedMode();
+
     });
 }
 
@@ -102,6 +120,9 @@ function logout() {
 
     console.log("Logging out");
 
+    toggleLoggedMode();
+    closeSettings();
+
     typedPassword = null;
     username = null;
 
@@ -116,7 +137,6 @@ function logout() {
     BigPB.src = `../../recources/graphics/profilePictures/white.png`;
 
     deleteCookie("log");
-    toggleLoggedMode();
 }
 
 function blinkRed() {

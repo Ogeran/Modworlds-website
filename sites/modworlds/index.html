@@ -40,7 +40,7 @@
             <div id="container">
                 <p class="log ; invisible" id ="settings" onclick="toggleSettings()">Settings</p>
                 <p class="log ; invisible" id="rank">Rank:</p>
-                <p id="xp_bar" class="log">100%</p>
+                <p id="xp_bar" class="log ; invisible">100%</p>
                 <a>Discord</a>
             </div>
         </div>
@@ -77,15 +77,25 @@
             <img id="PBbigEditIcon" src="../../recources/graphics/icons/pencil.png" onclick="slideTogglePBCollection()">
 
             <p id="PWT1">Password:</p>
-            <input id="PWresetOriginal">
+            <input id="PWresetOriginal" type="password">
+
             <p id="PWT2">New Password:</p>
-            <input id="PWresetNew1">
+            <input id="PWresetNew1" type="password">
+
             <p id="PWT3">New Password:</p>
+            <input id="PWresetNew2" type="password">
 
             <button id="SetPasswortBTN" onclick="changePassword()">Change Password</button>
-            <button id="deleteBTN" onclick="deleteAccount()">Delete Account</button>
+            <button id="deleteBTN" onclick="togglePopupDeleteAccount()">Delete Account</button>
+        </div>
 
-            <input id="PWresetNew2">
+        <div id="pwdeleteDraft">
+            <p style="font-size: x-large;">Delete account</p>
+            <p>Password:</p>
+            <input id="popupPW" type="password">
+
+            <button onclick="togglePopupDeleteAccount()">STOP</button>
+            <button onclick="deleteAccount()">Delete</button>
         </div>
 
         <div id="PBcollection">
