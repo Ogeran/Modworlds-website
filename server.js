@@ -59,7 +59,7 @@ app.get('*', (req, res) => {
     const contentType = mime.getType(filePath) || 'application/octet-stream';
 
     console.log(filePath);
-    if(!filePath.includes('api') && !filePath.includes('cookie')) {
+    if(!filePath.includes('api')) {
         res.setHeader('Content-Type', contentType);
         res.sendFile(filePath);
     }
@@ -84,6 +84,12 @@ app.get('*', (req, res) => {
         }
         else if(filePath.includes('api/deleteAccount')) {
             deleteAccount(req, res);
+        }
+        else if(filePath.includes('api/sendMessage')) {
+            sendMessage(req, res);
+        }
+        else if(filePath.includes('api/getChat')) {
+            getChatHistory(req, res);
         }
     }
 });
@@ -110,7 +116,10 @@ function addAccount(req, res) {
                 "password": String(password),
                 "rank": 1,
                 "projects": [],
-                "profilePicture":""
+                "chats":[
+                    "Main-Chat"
+                ],
+                "profilePicture":"../../recources/graphics/profilePictures/white.png"
             }
         };
 
@@ -292,6 +301,122 @@ function deleteAccount(req, res) {
                         fs.writeFileSync('data/accounts.json', updated, 'utf8');
 
                         res.send("pass");
+                        return;
+                    }
+                }
+            }
+        }
+    });
+}
+
+function sendMessage(req, res) {
+    console.log("Executing send message");
+
+    const name = req.query.param1;
+    const password = req.query.param2;
+
+    const id = req.query.param3;
+    var message = req.query.param4;
+
+    message = message.replace('+', ' ');
+
+    console.log("Initialized variables: " + name + " " + password + " " + id + " " + message);
+
+    fs.readFile('data/accounts.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+            reject(err);
+            return;
+        }
+
+        const json = JSON.parse(data);
+        var i2;
+
+        for(var i = 0; i < json.accounts.length; i++) {
+            if (json.accounts[i] != null) {
+                if (json.accounts[i][name] != null) {
+                    if(json.accounts[i][name].password == hashCode(password)) {
+                        if(json.accounts[i][name].chats.some(e => e == id)) {
+                            i2 = i;
+                            fs.readFile(`data/chats/${id}.txt`, 'utf8', (err, data) => {
+                                if (err) {
+                                    console.error(err);
+                                    return;
+                                }
+                                var content = data;
+
+                                try {
+                                    console.log(json.accounts[i2]);
+                                    console.log(json.accounts[i2][name]);
+                                    console.log(json.accounts[i2][name].profilePicture);
+                                    content += `<br><div class="c"><img class="chatPB" src="${json.accounts[i2][name].profilePicture}"><div class="textSpan"><b><span class="topName">${name}</span></b><br>${message}</div></div>`;
+                                }
+                                catch(error) {
+                                    console.error("Error adding content", error)
+                                }
+
+                                fs.writeFile(`data/chats/${id}.txt`, content, 'utf8', (err) => {
+                                    if (err) {
+                                        console.error(err);
+                                        return;
+                                    }
+                                    console.log('File written successfully.');
+
+                                    res.send("pass");
+                                    return;
+                                });
+                            });
+                        }
+                        else {
+                            console.log("No permission");
+                        }
+                    }
+                    else {
+                        console.log("Incorrect password");
+                    }
+                }
+            }
+        }
+    });
+}
+
+function getChatHistory(req, res) {
+    const name = req.query.param1;
+    const password = req.query.param2;
+
+    const id = req.query.param3;
+
+    fs.readFile('data/accounts.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+            reject(err);
+            return;
+        }
+
+        const json = JSON.parse(data);
+
+        for(var i = 0; i < json.accounts.length; i++) {
+            if (json.accounts[i] != null) {
+                if (json.accounts[i][name] != null) {
+                    if(json.accounts[i][name].password == hashCode(password)) {
+                        if(json.accounts[i][name].chats.some(e => e == String(id))) {
+                            fs.readFile(`data/chats/${id}.txt`, 'utf8', (err, data) => {
+                                if (err) {
+                                    console.error(err);
+                                    return;
+                                }
+
+                                res.send(data);
+                                return;
+                            });
+                        }
+                        else {
+                            res.send("Failed to load chat history: No access granted!");
+                            return;
+                        }
+                    }
+                    else {
+                        res.send("Failed to load chat history: Wrong password.");
                         return;
                     }
                 }

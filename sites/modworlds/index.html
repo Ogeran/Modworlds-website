@@ -13,8 +13,9 @@
         <link rel="stylesheet" href="../../recources/attributes/deco.css">
         <link rel="stylesheet" href="../../recources/attributes/footer.css">
         <link rel="stylesheet" href="../../recources/attributes/settings.css">
+        <link rel="stylesheet" href="../../recources/attributes/chat.css">
 
-        <link rel="stylesheet" href="../../recources/attributes/classes/pictureBacks.css">
+        <link rel="stylesheet" href="../../recources/attributes/pictureBacks.css">
 
         <link rel="stylesheet" href="../../recources/attributes/modifiers.css">
         <link rel="stylesheet" href="../../recources/attributes/sidebar.css">
@@ -24,6 +25,7 @@
         <script src="../../recources/scripts/sidebarSlider.js"></script>
         <script src="../../recources/scripts/login.js"></script>
         <script src="../../recources/scripts/settingsManager.js"></script>
+        <script src="../../recources/scripts/chatManager.js"></script>
         
     </head>
     <body id="null" onload="handleLoad()">
@@ -40,6 +42,14 @@
             <div id="container">
                 <p class="log ; invisible" id ="settings" onclick="toggleSettings()">Settings</p>
                 <p class="log ; invisible" id="rank">Rank:</p>
+
+                <p id="title">Chats</p>
+                <div id="sidebarChatContainer">
+                    <p class="chatHook" onclick="toggleChat('Main-Chat')">Main chat</p>
+                    <p class="chatHook" onclick="toggleChat()">Another chat</p>
+                    <p class="chatHook" onclick="toggleChat()">Admin chat</p>
+                </div>
+
                 <p id="xp_bar" class="log ; invisible">100%</p>
                 <a>Discord</a>
             </div>
@@ -102,6 +112,28 @@
             <img class="pb" src="../../recources/graphics/profilePictures/white.png" onclick="setProfilePicture('../../recources/graphics/profilePictures/white.png')">
             <img class="pb" src="../../recources/graphics/profilePictures/OgeranWithTNT.jpg" onclick="setProfilePicture('../../recources/graphics/profilePictures/OgeranWithTNT.jpg')">
             <img class="pb" src="../../recources/graphics/profilePictures/metro_pb.jpg" onclick="setProfilePicture('../../recources/graphics/profilePictures/metro_pb.jpg')">
+            <img class="pb" src="../../recources/graphics/profilePictures/metro_blue_light.png" onclick="setProfilePicture('../../recources/graphics/profilePictures/metro_blue_light.png')">
+            <img class="pb" src="../../recources/graphics/profilePictures/metro_cyan.png" onclick="setProfilePicture('../../recources/graphics/profilePictures/metro_cyan.png')">
+            <img class="pb" src="../../recources/graphics/profilePictures/metro_deep.png" onclick="setProfilePicture('../../recources/graphics/profilePictures/metro_deep.png')">
+            <img class="pb" src="../../recources/graphics/profilePictures/metro_green.png" onclick="setProfilePicture('../../recources/graphics/profilePictures/metro_green.png')">
+            <img class="pb" src="../../recources/graphics/profilePictures/metro_orange.png" onclick="setProfilePicture('../../recources/graphics/profilePictures/metro_orange.png')">
+            <img class="pb" src="../../recources/graphics/profilePictures/metro_purple.png" onclick="setProfilePicture('../../recources/graphics/profilePictures/metro_purple.png')">
+            <img class="pb" src="../../recources/graphics/profilePictures/metro_red.png" onclick="setProfilePicture('../../recources/graphics/profilePictures/metro_red.png')">
+            <img class="pb" src="../../recources/graphics/profilePictures/metro_rose_red.png" onclick="setProfilePicture('../../recources/graphics/profilePictures/metro_rose_red.png')">
+            <img class="pb" src="../../recources/graphics/profilePictures/metro_yellow.png" onclick="setProfilePicture('../../recources/graphics/profilePictures/metro_yellow.png')">
+        </div>
+
+        <div id="chatBackground">
+            <p id="closeChatBTN" onclick="toggleChat()">x</p>
+            <p id="cn">Chat Name</p>
+            <hr>
+            <div id="chatContainer">
+                
+            </div>
+            <div id="chatControls">
+                <input id="chatValue">
+                <button onclick="sendMessage()">Send</button>
+            </div>
         </div>
 
         <div>
@@ -119,12 +151,12 @@
         <div class="pictureLeftOrigin" style="background-image:url(../../recources/graphics/pictures/backgrounds/Ocean.png);">
             <div>
                 <img id="playerLeft" src="../../recources/graphics/Skins/Ogeranrunning1.png">
-                <p id="playerLeftText">Modworlds ist ein kollektiv von leuten welche minecraft projekte hosten. Modworlds sorgt dafür das diese projekte server und mitspieler haben. Zusätzlich Moderiert Modworlds diese projekte.</p>
+                <p id="playerLeftText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div>
         <div class="pictureRightOrigin" style="background-image:url(../../recources/graphics/pictures/backgrounds/Ocean.png);">
             <div>
-                <p id="playerRightText">Modworlds ist ein kollektiv von leuten welche minecraft projekte hosten. Modworlds sorgt dafür das diese projekte server und mitspieler haben. Zusätzlich Moderiert Modworlds diese projekte.</p>
+                <p id="playerRightText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <img id="playerRight" src="../../recources/graphics/Skins/Ogeranrunning2.png">
             </div>
         </div>

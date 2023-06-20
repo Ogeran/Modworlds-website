@@ -1,0 +1,166 @@
+#chatBackground {
+    width:65vw;
+    height:100vh;
+    margin-left:35vw;
+    position: fixed;
+
+    border-top-left-radius:1cm;
+    border-bottom-left-radius:1cm;
+
+    background-color: white;
+
+    z-index:500;
+
+    box-shadow:0 0 0.75cm rgba(0,0,0,0.3);
+
+    transition:1s ease-in-out;
+
+    transform: translateX(100vw);
+}
+
+#chatBackground > #cn {
+    color: dodgerblue;
+    width:100%;
+    text-align: center;
+    font-size: x-large;
+}
+
+#chatBackground > hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 0.1cm solid dodgerblue;
+    margin: 1em 0;
+    padding: 0;
+}
+
+#chatControls > input {
+    position: absolute;
+    width: 80%;
+
+    border:0;
+    border-bottom:solid 0.1cm dodgerblue;
+
+    right:15%;
+    bottom:2.5%;
+}
+
+#chatControls > button {
+    position: absolute;
+    margin:2.5%;
+    margin-top:0;
+    margin-bottom:0;
+    width:10%;
+    bottom:0;
+    right:0;
+    background-color: lightgreen;
+
+    color: white;
+    padding:0.2cm;
+
+    border-radius: 10000cm;
+
+    cursor: pointer;
+
+    border:0;
+
+    transition: 0.4s;
+
+    border:solid 0.1cm white;
+}
+
+#chatControls > button:hover {
+    background-color: white;
+
+    color: lightgreen;
+
+    border:solid 0.1cm lightgreen;
+}
+
+#chatContainer {
+
+    position: relative;
+
+    width:90%;
+    margin:2.5%;
+    margin-top:0;
+
+    height:70%;
+    border-radius: 1cm;
+
+    color:dodgerblue;
+
+    overflow-y: scroll;
+
+    padding:2.5%;
+    padding-top:0;
+}
+
+#chatControls {
+    position: relative;
+
+    width:95%;
+    margin:2.5%;
+
+    height:5%;
+
+    align-content: center;
+}
+
+#closeChatBTN {
+    color:dodgerblue;
+    position: absolute;
+
+    top:-0.5vw;
+    left:1vw;
+
+    cursor: pointer;
+}
+
+#sidebarChatContainer {
+    position: absolute;
+    left:0.5cm;
+    right:0.5cm;
+    top:5.5cm;
+    bottom:3cm;
+    border-left:solid 0.1cm dodgerblue;
+
+    overflow-y: scroll;
+}
+
+.chatHook {
+    color:dodgerblue;
+    cursor: pointer;
+    margin-bottom:0.25cm;
+    margin-left:0.5cm;
+}
+
+.chatPB {
+    width:1cm;
+    aspect-ratio:1/1;
+    border-radius:10000cm;
+    border:0.1cm solid dodgerblue;
+    float:left;
+
+    padding-bottom: auto;
+}
+
+.textSpan {
+    width:calc(100% - 2cm);
+    margin-right:0.5cm;
+    float:right;
+}
+
+.topName {
+    color:dodgerblue;
+    font-size:smaller;
+    text-decoration:underline;
+    text-decoration-thickness:0.05cm;
+}
+
+.c {
+    height:auto;
+    width:100%;
+    display: block;
+    min-height:1cm;
+}
